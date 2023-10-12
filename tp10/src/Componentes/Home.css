@@ -1,0 +1,15 @@
+.ofertas.container{
+    border: none;
+    box-shadow: none;
+}
+
+.ofertas h4, .ofertas a{
+    display: inline-block;
+    margin-left: -15px;
+}
+
+.ofertas a{
+    display: inline-block;
+    margin-left: 15px;
+    color: #3483fa;
+}
