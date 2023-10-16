@@ -9,16 +9,27 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 function Home() {
 
     return (
-        <>
-            <button className="proyectos">Proyectos</button>
-            <button className="sobre-nosotros">Sobre nosotros</button>
-            <Footer container>
-                <Footer.Copyright
-                    href="#"
-                    year={2023}
-                ></Footer.Copyright>
-            </Footer>
-        </>
+        <div>
+            <header>
+                <h1>Mi Portafolio</h1>
+                <ul>
+                    <li><a href="/">Inicio</a></li>
+                    <li><a href="/NuestrasCreaciones">Proyectos</a></li>
+                    <li><a href="QuienesSomos">Acerca de mí</a></li>
+                    <li><a href="/Contacto">Contacto</a></li>
+                </ul>
+            </header>
+
+            <div className="sobre-mi">
+                <h2>SOBRE MÍ</h2>
+                <h3>Martín Perez</h3>
+                <p>Tengo hablidad inhumana para programar en cualquier tipo de lenguaje.</p>
+            </div>
+
+            <footer>
+                <p>Derechos de autor © 2023 - Martín Perez y Alexis Bursztyn</p>
+            </footer>
+        </div>
     );
 
 
