@@ -1,0 +1,73 @@
+{
+    "Proyecto1": {
+        "Titulo": "",
+        "Descripcion": "",
+        "Foto": "",
+        "AñoCreacion": "",
+        "Favorito": "false",
+        "Destacado": "false"
+    },
+
+    "Proyecto2": {
+        "Titulo": "",
+        "Descripcion": "",
+        "Foto": "",
+        "AñoCreacion": "",
+        "Favorito": "false",
+        "Destacado": "true"
+    },
+
+    "Proyecto3": {
+        "Titulo": "",
+        "Descripcion": "",
+        "Foto": "",
+        "AñoCreacion": "",
+        "Favorito": "false",
+        "Destacado": "false"
+    },
+
+    "Proyecto4": {
+        "Titulo": "",
+        "Descripcion": "",
+        "Foto": "",
+        "AñoCreacion": "",
+        "Favorito": "false",
+        "Destacado": "true"
+    },
+
+    "Proyecto5": {
+        "Titulo": "",
+        "Descripcion": "",
+        "Foto": "",
+        "AñoCreacion": "",
+        "Favorito": "false",
+        "Destacado": "true"
+    },
+
+    "Proyecto6": {
+        "Titulo": "",
+        "Descripcion": "",
+        "Foto": "",
+        "AñoCreacion": "",
+        "Favorito": "false",
+        "Destacado": "false"
+    },
+
+    "Proyecto7": {
+        "Titulo": "",
+        "Descripcion": "",
+        "Foto": "",
+        "AñoCreacion": "",
+        "Favorito": "false",
+        "Destacado": "true"
+    },
+    
+    "Proyecto8": {
+        "Titulo": "",
+        "Descripcion": "",
+        "Foto": "",
+        "AñoCreacion": "",
+        "Favorito": "false",
+        "Destacado": "false"
+    }
+}
