@@ -1,73 +1,73 @@
 {
     "Proyecto1": {
-        "Titulo": "",
+        "Id": 1,
+        "Titulo": "uno",
         "Descripcion": "",
-        "Foto": "",
-        "AñoCreacion": "",
-        "Favorito": "false",
-        "Destacado": "false"
+        "Foto": "foto",
+        "AñoCreacion": "2018",
+        "Favorito": "false"
     },
 
     "Proyecto2": {
-        "Titulo": "",
+        "Id": 2,
+        "Titulo": "asdas",
         "Descripcion": "",
         "Foto": "",
         "AñoCreacion": "",
-        "Favorito": "false",
-        "Destacado": "true"
+        "Favorito": "false"
     },
 
     "Proyecto3": {
+        "Id": 3,
         "Titulo": "",
         "Descripcion": "",
         "Foto": "",
         "AñoCreacion": "",
-        "Favorito": "false",
-        "Destacado": "false"
+        "Favorito": "false"
     },
 
     "Proyecto4": {
-        "Titulo": "",
+        "Id": 4,
+        "Titulo": "edgfd",
         "Descripcion": "",
         "Foto": "",
         "AñoCreacion": "",
-        "Favorito": "false",
-        "Destacado": "true"
+        "Favorito": "false"
     },
 
     "Proyecto5": {
+        "Id": 5,
         "Titulo": "",
         "Descripcion": "",
         "Foto": "",
         "AñoCreacion": "",
-        "Favorito": "false",
-        "Destacado": "true"
+        "Favorito": "false"
     },
 
     "Proyecto6": {
+        "Id": 6,
         "Titulo": "",
         "Descripcion": "",
         "Foto": "",
         "AñoCreacion": "",
-        "Favorito": "false",
-        "Destacado": "false"
+        "Favorito": "false"
     },
 
     "Proyecto7": {
-        "Titulo": "",
+        "Id": 7,
+        "Titulo": "7",
         "Descripcion": "",
         "Foto": "",
         "AñoCreacion": "",
-        "Favorito": "false",
-        "Destacado": "true"
+        "Favorito": "false"
     },
     
     "Proyecto8": {
+        "Id": 8,
         "Titulo": "",
         "Descripcion": "",
         "Foto": "",
         "AñoCreacion": "",
-        "Favorito": "false",
-        "Destacado": "false"
+        "Favorito": "false"
     }
 }
