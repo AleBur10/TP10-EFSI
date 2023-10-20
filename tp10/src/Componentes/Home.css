@@ -1,6 +1,5 @@
 /* Estilos para el encabezado (header) */
 header {
-  background-color: #7be2b5;
   color: #fff;
   text-align: center;
   padding: 20px;
@@ -29,11 +28,20 @@ nav ul li a {
   font-size: 24px;
   text-align: center;
   margin-top: 20px;
+  margin-right: 30%;
+
+}
+.tituloFavoritos{
+  font-size: 24px;
+  text-align:right;
+  margin-right: 30%;
+  margin-top: 20px;
 }
 /* En tu archivo CSS */
 .card {
   margin: 10px;
   padding: 10px;
+  background-color: #ffffff;
   border: 1px solid #ddd;
   border-radius: 5px;
   text-align: center;
