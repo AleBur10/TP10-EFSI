@@ -19,8 +19,6 @@ function Project({ proyecto, onDrop }) {
             isDragging: monitor.isDragging(),
         })
     }))
-    console.log("PEPE");
-
     return (
         <div ref={ref} style={{ opacity: isDragging ? 0.5 : 1 }}>
             <Card className="card text-center" style={{ width: '18rem' }}>

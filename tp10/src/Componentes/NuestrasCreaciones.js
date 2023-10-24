@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import { Card } from "react-bootstrap";
+import { Card, Container } from "react-bootstrap";
+import {Row , Col } from 'react-bootstrap';
 
 
 function NuestrasCreaciones() {
@@ -40,22 +41,22 @@ function NuestrasCreaciones() {
     return (
         <>
             <div class="container text-center">
-                <div class="row">
-                    <div class="col">
-                        {proyectos.map(proyecto => (
-                            <Card className="card text-center" style={{ width: '18rem' }}>
-                                <Card.Img className="fotoCard" variant="top" src={proyecto.Foto} />
-                                <Card.Body className="d-flex flex-column align-items-center">
-                                    <Card.Title className="tituloCard">{proyecto.Titulo}</Card.Title>
-                                    <Card.Text className="descCard">{proyecto.Descripcion}</Card.Text>
-                                    <button className="detail-button" onClick={() => fetchProyectoInfo(proyecto.Id)}>
-                                        Más info
-                                    </button>
-                                </Card.Body>
-                            </Card>
+                <Row xs={1} md={3} className="g-4" style={{ width: '18rem' }}>
+                        {proyectos.map((proyecto, idx) => (
+                            <Col key={idx} style={{width: "100%"}}>
+                                <Card className="card text-center" style={{width: "100%"}}>
+                                    <Card.Img className="fotoCard" variant="top" src={proyecto.Foto} />
+                                    <Card.Body className="d-flex flex-column align-items-center">
+                                        <Card.Title className="tituloCard">{proyecto.Titulo}</Card.Title>
+                                        <Card.Text className="descCard">{proyecto.Descripcion}</Card.Text>
+                                        <button className="detail-button" onClick={() => fetchProyectoInfo(proyecto.Id)}>
+                                            Más info
+                                        </button>
+                                    </Card.Body>
+                                </Card>
+                            </Col>
                         ))}
-                    </div>
-                </div>
+                </Row>
             </div>
 
 
