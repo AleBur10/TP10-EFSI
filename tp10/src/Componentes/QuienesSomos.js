@@ -29,7 +29,7 @@ function QuienesSomos() {
                             <h2>Alexis Bursztyn</h2>
                             <p className="title">Founder de DePhishing</p>
                             <p>Nada llega por sí solo.</p>
-                            <p>alebur10@gmail.com.com</p>
+                            <p>alebur10@gmail.com</p>
                             <p><button className="button">Contact</button></p>
                         </div>
                     </div>

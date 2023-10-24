@@ -4,7 +4,7 @@
             "Id": 1,
             "Titulo": "TP9-EFSI",
             "Descripcion": "Página de compra de juegos",
-            "Foto": "foto",
+            "Foto": "./proyecto1.png",
             "AñoCreacion": "2022",
             "Favorito": "false"
         },
