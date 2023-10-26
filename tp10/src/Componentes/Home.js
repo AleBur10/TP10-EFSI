@@ -80,7 +80,7 @@ function ListaProyectos({Categoria, proyectosAMostrar, proyectos, setProyectos, 
             <h1>{Categoria}</h1>
             <Row>
                 {proyectosAMostrar.map(proyecto => (
-                    <Col key={proyecto.id} xs={12} sm={6} md={4}>
+                    <Col key={proyecto.id} xs={12} sm={6} md={6}>
                         <Project proyecto={proyecto} onDrop={() => handleDrop(proyecto.Id)} />
                     </Col>
                 ))}

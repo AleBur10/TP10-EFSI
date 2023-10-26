@@ -11,7 +11,7 @@ function QuienesSomos() {
             <div className="row">
                 <div className="column">
                     <div className="card">
-                        <img src="/martin.jpg" style={{ width: '100%' }} />
+                        <img src="/martin.jpg" style={{ width: '20%' }}/>
                         <div className="container">
                             <h2>Martín Perez</h2>
                             <p className="title">CEO y Founder de MarCo</p>
@@ -24,7 +24,7 @@ function QuienesSomos() {
 
                 <div className="column">
                     <div className="card">
-                        <img src="/w3images/team2.jpg" alt="Mike" style={{ width: '100%' }} />
+                        <img src="/vegetta.jpg" alt="Mike" style={{ width: '20%' }} />
                         <div className="container">
                             <h2>Alexis Bursztyn</h2>
                             <p className="title">Founder de DePhishing</p>

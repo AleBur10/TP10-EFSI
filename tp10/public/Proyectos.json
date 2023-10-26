@@ -4,16 +4,16 @@
             "Id": 1,
             "Titulo": "TP9-EFSI",
             "Descripcion": "Página de compra de juegos",
-            "Foto": ["./proyecto1.png"],
+            "Foto": ["/proyecto1.PNG"],
             "AñoCreacion": "2022",
             "Favorito": "false"
         },
 
         {
             "Id": 2,
-            "Titulo": "asdas",
-            "Descripcion": "",
-            "Foto": [""],
+            "Titulo": "QQSM",
+            "Descripcion": "Es el tipico juego de quien quiere ser millonario",
+            "Foto": ["/vegetta.jpg"],
             "AñoCreacion": "",
             "Favorito": "false"
         },
