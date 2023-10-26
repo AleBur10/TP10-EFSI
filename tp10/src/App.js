@@ -9,7 +9,7 @@ import Layout from './Componentes/Layout';
 import { Route, BrowserRouter } from 'react-router-dom';
 import { Routes } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 function App() {

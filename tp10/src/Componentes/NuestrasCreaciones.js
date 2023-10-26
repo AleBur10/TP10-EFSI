@@ -1,8 +1,9 @@
+import "./NuestrasCreaciones.css";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import { Card, Container } from "react-bootstrap";
-import {Row , Col } from 'react-bootstrap';
+import { Card, CardGroup, Container } from "react-bootstrap";
+import { Row, Col } from 'react-bootstrap';
 
 
 function NuestrasCreaciones() {
@@ -41,21 +42,21 @@ function NuestrasCreaciones() {
     return (
         <>
             <div class="container text-center">
-                <Row xs={1} md={3} className="g-4" style={{ width: '18rem' }}>
-                        {proyectos.map((proyecto, idx) => (
-                            <Col key={idx} style={{width: "100%"}}>
-                                <Card className="card text-center" style={{width: "100%"}}>
-                                    <Card.Img className="fotoCard" variant="top" src={proyecto.Foto} />
-                                    <Card.Body className="d-flex flex-column align-items-center">
-                                        <Card.Title className="tituloCard">{proyecto.Titulo}</Card.Title>
-                                        <Card.Text className="descCard">{proyecto.Descripcion}</Card.Text>
-                                        <button className="detail-button" onClick={() => fetchProyectoInfo(proyecto.Id)}>
-                                            Más info
-                                        </button>
-                                    </Card.Body>
-                                </Card>
-                            </Col>
-                        ))}
+                <Row xs={1} md={2} className="g-4">
+                    {proyectos.map((proyecto, idx) => (
+                        <Col md={3} key={idx}>
+                            <Card className="card text-center">
+                                <Card.Img className="fotoCard" variant="top" src={proyecto.Foto} />
+                                <Card.Body className="d-flex flex-column align-items-center">
+                                    <Card.Title className="tituloCard">{proyecto.Titulo}</Card.Title>
+                                    <Card.Text className="descCard">{proyecto.Descripcion}</Card.Text>
+                                    <button className="detail-button" onClick={() => fetchProyectoInfo(proyecto.Id)}>
+                                        Más info
+                                    </button>
+                                </Card.Body>
+                            </Card>
+                        </Col>
+                    ))}
                 </Row>
             </div>
 

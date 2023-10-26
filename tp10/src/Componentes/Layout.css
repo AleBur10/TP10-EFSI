@@ -37,7 +37,9 @@ header h1 {
     color: #333;
 }
 
-
+nav{
+    background-color: aqua;
+}
 .navbar a {
     color: #333;
     font-size: 16px;

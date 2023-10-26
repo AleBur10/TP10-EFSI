@@ -4,7 +4,7 @@
             "Id": 1,
             "Titulo": "TP9-EFSI",
             "Descripcion": "Página de compra de juegos",
-            "Foto": "./proyecto1.png",
+            "Foto": ["./proyecto1.png"],
             "AñoCreacion": "2022",
             "Favorito": "false"
         },
@@ -13,7 +13,7 @@
             "Id": 2,
             "Titulo": "asdas",
             "Descripcion": "",
-            "Foto": "",
+            "Foto": [""],
             "AñoCreacion": "",
             "Favorito": "false"
         },
@@ -22,7 +22,7 @@
             "Id": 3,
             "Titulo": "fddf",
             "Descripcion": "",
-            "Foto": "",
+            "Foto": [""],
             "AñoCreacion": "",
             "Favorito": "false"
         },
@@ -31,7 +31,7 @@
             "Id": 4,
             "Titulo": "edgfd",
             "Descripcion": "",
-            "Foto": "",
+            "Foto": [""],
             "AñoCreacion": "",
             "Favorito": "false"
         },
@@ -40,7 +40,7 @@
             "Id": 5,
             "Titulo": "efef",
             "Descripcion": "",
-            "Foto": "",
+            "Foto": [""],
             "AñoCreacion": "",
             "Favorito": "false"
         },
@@ -49,7 +49,7 @@
             "Id": 6,
             "Titulo": "gtht",
             "Descripcion": "",
-            "Foto": "",
+            "Foto": [""],
             "AñoCreacion": "",
             "Favorito": "false"
         },
@@ -58,7 +58,7 @@
             "Id": 7,
             "Titulo": "7",
             "Descripcion": "",
-            "Foto": "",
+            "Foto": [""],
             "AñoCreacion": "",
             "Favorito": "false"
         },
@@ -67,7 +67,7 @@
             "Id": 8,
             "Titulo": "",
             "Descripcion": "",
-            "Foto": "",
+            "Foto": [""],
             "AñoCreacion": "",
             "Favorito": "false"
         }
