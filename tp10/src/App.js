@@ -8,6 +8,7 @@ import { Route, BrowserRouter } from 'react-router-dom';
 import { Routes } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import FavoritosContext from './context/FavoritosContext';
 
 
 function App() {
@@ -29,11 +30,13 @@ function App() {
   return (
     <BrowserRouter>
       <Layout />
+      <FavoritosContext.Provider value={{listFavs, setListFavs}}>
       <Routes>
         <Route path="/" element={<Home />}></Route>
         <Route path="/Favoritos" element={<Favoritos />}></Route>
         <Route path="/NuestrasCreaciones" element={<NuestrasCreaciones />}></Route>
        </Routes>
+       </FavoritosContext.Provider>
     </BrowserRouter>
   );
 }
