@@ -12,8 +12,7 @@ import FavoritosContext from "../context/FavoritosContext";
 function Home() {
 
     const [proyectos, setProyectos] = useState([]);
-    const [fav, setFav] = useState([]);
-    const [proyectosFavoritos, setProyectosFavoritos] = useState([]);
+    //const [proyectosFavoritos, setProyectosFavoritos] = useState([]);
     const { listFavs, setListFavs } = useContext(FavoritosContext);
     const navigate = useNavigate();
     useEffect(() => {
@@ -26,9 +25,14 @@ function Home() {
 
     useEffect(() => {
         listFavs.forEach(fav => {
-            if(fav.id === proyectos.id) setListFavs('★')
+            if (fav.id === proyectos.id) setListFavs('★')
         });
     }, [])
+
+    function guardarFavsLocalStorage(favoritos) {
+        localStorage.setItem('favoritos', JSON.stringify(favoritos));
+    }
+
 
     const fetchProyectos = () => {
         axios.get('Proyectos.json')
@@ -46,31 +50,33 @@ function Home() {
     if (proyectos.length === 0) return (<></>);
 
     const cambiarFav = (proyecto) => {
-        const proyectosActualizados = proyectos.map(p => {
-          if (p.id === proyecto.id) {
-            return { ...p, fav: p.fav === '☆' ? '★' : '☆' };
-          }
-          return p;
+        const proyectosActualizados = proyectos.map((p) => {
+            if (p.id === proyecto.id) {
+                const updatedProject = { ...p, listFavs: p.listFavs === '☆' ? '★' : '☆', favorito: !p.favorito };
+                setListFavs([...listFavs, updatedProject]);
+                return updatedProject;
+            }
+            return p;
         });
-      
+
         setProyectos([...proyectosActualizados]);
-      
-        // Aquí puedes manejar la lógica para actualizar tus favoritos (setListFavs) si es necesario.
-      
+        guardarFavsLocalStorage(listFavs);
     };
 
     return (
         <>
-         <div class="container text-center">
+            <div class="container text-center">
                 <Row xs={1} md={2} className="g-4">
-                    {proyectos.map((proyecto, idx) => (
-                        <Col md={3} key={idx}>
+                    {proyectos.map((proyecto) => (
+                        <Col md={3} key={proyecto.Id}>
                             <Card className="card text-center">
                                 <Card.Img className="fotoCard" variant="top" src={proyecto.Foto} />
                                 <Card.Body className="d-flex flex-column align-items-center">
                                     <Card.Title className="tituloCard">{proyecto.Titulo}</Card.Title>
                                     <Card.Text className="descCard">{proyecto.Descripcion}</Card.Text>
-                                    <p onClick={() => cambiarFav(proyecto)} className="favorito">{proyecto.fav}</p>
+                                    <p onClick={() => cambiarFav(proyecto)} className="favorito">
+                                        {proyecto.fav}
+                                    </p>
                                 </Card.Body>
                             </Card>
                         </Col>

@@ -38,7 +38,7 @@ function Layout() {
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
-            <footer>
+            <footer className="footer">
                 <p>Derechos de autor © 2023 - Martín Perez y Alexis Bursztyn</p>
             </footer>
         </>

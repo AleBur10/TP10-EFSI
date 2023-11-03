@@ -2,48 +2,41 @@ import "./Favoritos.css"
 import { useContext } from "react";
 import FavoritosContext from "../context/FavoritosContext";
 import { Table } from "react-bootstrap";
+import { useState } from "react";
 
 
-function Favoritos(){
+function Favoritos() {
 
-    const { listFavs, setListFavs } = useContext(FavoritosContext);
+  const listFavs = getFavoritosLocalStorage();
 
-    const eliminarProyecto = (proyectoId) => {
-        setListFavs(
-            listFavs.filter((proyecto) => proyecto.id !== proyectoId),
-        ); //filtra la lista para que aparezcan todos los productos que tengan un id distinto al que se le pasa
-    };
+  function getFavoritosLocalStorage() {
+    const storedFavorites = localStorage.getItem('favorites');
+    return storedFavorites ? JSON.parse(storedFavorites) : [];
+  }
 
-    return(
-        <Table striped bordered hover>
-        <tbody>
-          {listFavs.map((proyecto) => (
-            <tr key={proyecto.id}>
-              <td>
-                {proyecto.foto[0] && (
-                  <img
-                    style={{ maxWidth: "100%", maxHeight: "150px" }}
-                    src={proyecto.foto[0]}
-                    alt={proyecto.titulo}
-                  />
-                )}
-              </td>
-              <td>{proyecto.titulo}</td>
-              <td>{proyecto.descripcion}</td>
-              <td>
-                <button
-                  className="btn btn-danger"
-                  onClick={() => eliminarProyecto(proyecto.id)}
-                >
-                  Eliminar de favoritos
-                </button>
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </Table>
 
-    );
+  return (
+    <Table striped bordered hover>
+      <tbody>
+        {listFavs.map((proyecto) => (
+          <tr key={proyecto.id}>
+            <td>
+              {proyecto.Foto && (
+                <img
+                  style={{ maxWidth: "100%", maxHeight: "150px" }}
+                  src={proyecto.Foto}
+                  alt={proyecto.Titulo}
+                />
+              )}
+            </td>
+            <td>{proyecto.Titulo}</td>
+            <td>{proyecto.Descripcion}</td>
+          </tr>
+        ))}
+      </tbody>
+    </Table>
+
+  );
 }
 
 export default Favoritos;
