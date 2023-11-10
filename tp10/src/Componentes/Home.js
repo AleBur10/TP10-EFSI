@@ -91,7 +91,7 @@ function Home() {
             <div className="row">
                 <div className="column">
                     <div className="card">
-                        <img src="/martin.jpg" style={{ width: '20%' }} />
+                        <img className="FotoSobreNos" src="/martin.jpg" style={{ width: '20%' }} />
                         <div className="container">
                             <h2>Martín Perez</h2>
                             <p className="title">CEO y Founder de MarCo</p>
@@ -104,12 +104,12 @@ function Home() {
 
                 <div className="column">
                     <div className="card">
-                        <img src="/vegetta.jpg" alt="Mike" style={{ width: '20%' }} />
+                        <img className="FotoSobreNos" src="/Alexis.jpg" alt="Mike" style={{ width: '20%' }} />
                         <div className="container">
                             <h2>Alexis Bursztyn</h2>
-                            <p className="title">Founder de DePhishing</p>
+                            <p className="title">Founder de DePhished</p>
                             <p>Nada llega por sí solo.</p>
-                            <p>alebur10@gmail.com</p>
+                            <p>alexis.bursztyn@gmail.com</p>
                             <p><button className="button">Contact</button></p>
                         </div>
                     </div>
@@ -134,6 +134,7 @@ function Home() {
                     <button type="submit" className="submit-button">Enviar</button>
                 </form>
             </div>
+            
         </>
     );
 

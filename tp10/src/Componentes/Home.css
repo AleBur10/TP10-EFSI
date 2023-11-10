@@ -49,8 +49,8 @@ nav ul li a {
 }
 
 .fotoCard {
-  max-width: 100%;
-  height: auto;
+  width: 200px;
+  height: 150px;
 }
 
 .tituloCard {
@@ -80,7 +80,8 @@ nav ul li a {
 .contact-form-container {
   max-width: 400px;
   margin: 0 auto;
-  margin-top: 4%;
+  margin-top: 2%;
+  margin-bottom: 5%;
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 8px;
@@ -191,4 +192,10 @@ html {
     width: 100%;
     display: block;
   }
+}
+
+.FotoSobreNos{
+  margin: 1%;
+  text-align: center;
+  margin-left: 40%;
 }
