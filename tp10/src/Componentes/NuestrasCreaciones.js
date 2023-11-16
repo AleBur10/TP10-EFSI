@@ -50,7 +50,7 @@ function NuestrasCreaciones() {
 
     return (
         <>
-            <div className="container text-center">
+            <div className="container text-center" style={{ marginTop: "10%", marginBottom: "5%" }}>
                 <Row xs={1} md={2} className="g-4">
                     {proyectos.map((proyecto) => (
                         <Col md={3} key={proyecto.Id}>
@@ -73,22 +73,15 @@ function NuestrasCreaciones() {
                 <Modal.Header closeButton>
                     <Modal.Title>Detalles del proyecto</Modal.Title>
                 </Modal.Header>
-                <Modal.Body>
-                    {/* Display project details from the selectedProject */}
+                <Modal.Body style={{ backgroundColor: "gray" }}>
                     {proyectoSeleccionado && (
-                        <div>
+                        <div style={{ color: "white" }}>
                             <h4>Nombre: {proyectoSeleccionado.Titulo}</h4>
                             <p>Descripción: {proyectoSeleccionado.Descripcion}</p>
                             <p>Año de creación: {proyectoSeleccionado.AñoCreacion}</p>
-                            {/* Display more project details as needed */}
                         </div>
                     )}
                 </Modal.Body>
-                <Modal.Footer>
-                    <Button variant="secondary" onClick={closeModal}>
-                        Cerrar
-                    </Button>
-                </Modal.Footer>
             </Modal>
 
 

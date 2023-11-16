@@ -16,14 +16,16 @@ function App() {
   const [listFavs, setListFavs] = useState([]);
   
   useEffect(() => {
+      if(listFavs.length === 0) return;
+      console.log("ListaFavs", listFavs);
       localStorage.setItem("favoritos", JSON.stringify(listFavs));
   },[listFavs]);
 
   useEffect(() => {
-    let favs = localStorage.getItem("favoritos");
+    let favs = JSON.parse(localStorage.getItem("favoritos"));
 
     if (favs) {
-      setListFavs(JSON.parse(favs));
+      setListFavs([...favs]);
     }
   },[]);
 

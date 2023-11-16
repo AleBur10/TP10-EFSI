@@ -51,7 +51,7 @@ function Home() {
 
     const cambiarFav = (proyecto) => {
         const proyectosActualizados = proyectos.map((p) => {
-            if (p.id === proyecto.id) {
+            if (p.Id === proyecto.Id) {
                 const updatedProject = { ...p, listFavs: p.listFavs === '☆' ? '★' : '☆', favorito: !p.favorito };
                 setListFavs([...listFavs, updatedProject]);
                 return updatedProject;
@@ -60,12 +60,11 @@ function Home() {
         });
 
         setProyectos([...proyectosActualizados]);
-        guardarFavsLocalStorage(listFavs);
     };
 
     return (
         <>
-            <div class="container text-center">
+            <div class="container text-center" style={{ marginTop: "10%", marginBottom: "5%" }}>
                 <Row xs={1} md={2} className="g-4">
                     {proyectos.map((proyecto) => (
                         <Col md={3} key={proyecto.Id}>

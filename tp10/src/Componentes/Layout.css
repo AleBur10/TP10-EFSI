@@ -37,9 +37,10 @@ header h1 {
     color: #333;
 }
 
-nav{
+nav {
     background-color: aqua;
 }
+
 .navbar a {
     color: #333;
     font-size: 16px;
@@ -49,4 +50,13 @@ nav{
 
 .navbar a:hover {
     color: #4CAF50;
+}
+
+.NavegadorPrincipal {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    transition-duration: 0.3s, 0.3s;
+    transition-timing-function: ease, ease;
+    transition-delay: 0s, 0s;
+    font-weight: 700;
 }

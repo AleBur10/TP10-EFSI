@@ -24,7 +24,7 @@ function Layout() {
 
     return (
         <>
-            <Navbar expand="lg" className="bg-body-tertiary">
+            <Navbar className="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="NavegadorPrincipal">
                 <Container fluid>
                     <Navbar.Collapse id="navbarScroll">
                         <header>
@@ -38,7 +38,7 @@ function Layout() {
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
-            <footer className="footer">
+            <footer className="footer fixed-bottom">
                 <p>Derechos de autor © 2023 - Martín Perez y Alexis Bursztyn</p>
             </footer>
         </>
