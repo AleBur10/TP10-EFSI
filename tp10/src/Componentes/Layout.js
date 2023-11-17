@@ -1,7 +1,7 @@
 import "./Layout.css";
 import { Button, Container, Form, Nav, Navbar, NavItem } from "react-bootstrap";
 import { LinkContainer } from 'react-router-bootstrap'
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 
 
 function Layout() {
@@ -38,7 +38,8 @@ function Layout() {
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
-            <footer className="footer fixed-bottom">
+            <Outlet />
+            <footer className="footer">
                 <p>Derechos de autor © 2023 - Martín Perez y Alexis Bursztyn</p>
             </footer>
         </>

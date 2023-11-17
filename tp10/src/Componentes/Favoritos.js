@@ -11,12 +11,13 @@ import { Col } from "react-bootstrap";
 function Favoritos() {
 
   const context = useContext(FavoritosContext);
+  
 
   console.log("FavoritosEnFavoritos", context.listFavs);
 
   return (
 
-    <div className="container text-center" style={{ marginTop: "10%", marginBottom: "5%" }}>
+    <div className="container text-center" style={{ marginTop: "15%", marginBottom: "5%" }}>
       <Row xs={1} md={2} className="g-4">
         {context.listFavs.map((proyecto) => (
           <Col md={3} key={proyecto.Id}>

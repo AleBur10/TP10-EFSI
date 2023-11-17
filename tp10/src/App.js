@@ -14,12 +14,12 @@ import FavoritosContext from './context/FavoritosContext';
 function App() {
 
   const [listFavs, setListFavs] = useState([]);
-  
+
   useEffect(() => {
-      if(listFavs.length === 0) return;
-      console.log("ListaFavs", listFavs);
-      localStorage.setItem("favoritos", JSON.stringify(listFavs));
-  },[listFavs]);
+    // if (listFavs.length === 0) return;
+    console.log("ListaFavs", listFavs);
+    localStorage.setItem("favoritos", JSON.stringify(listFavs));
+  }, [listFavs]);
 
   useEffect(() => {
     let favs = JSON.parse(localStorage.getItem("favoritos"));
@@ -27,18 +27,19 @@ function App() {
     if (favs) {
       setListFavs([...favs]);
     }
-  },[]);
+  }, []);
 
   return (
     <BrowserRouter>
-      <Layout />
-      <FavoritosContext.Provider value={{listFavs, setListFavs}}>
-      <Routes>
-        <Route path="/" element={<Home />}></Route>
-        <Route path="/Favoritos" element={<Favoritos />}></Route>
-        <Route path="/NuestrasCreaciones" element={<NuestrasCreaciones />}></Route>
-       </Routes>
-       </FavoritosContext.Provider>
+      <FavoritosContext.Provider value={{ listFavs, setListFavs }}>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Home />}></Route>
+            <Route path="/Favoritos" element={<Favoritos />}></Route>
+            <Route path="/NuestrasCreaciones" element={<NuestrasCreaciones />}></Route>
+          </Route>
+        </Routes>
+      </FavoritosContext.Provider>
     </BrowserRouter>
   );
 }

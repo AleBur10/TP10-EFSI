@@ -50,7 +50,7 @@ function NuestrasCreaciones() {
 
     return (
         <>
-            <div className="container text-center" style={{ marginTop: "10%", marginBottom: "5%" }}>
+            <div className="container text-center" style={{ marginTop: "14%" }}>
                 <Row xs={1} md={2} className="g-4">
                     {proyectos.map((proyecto) => (
                         <Col md={3} key={proyecto.Id}>

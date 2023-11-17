@@ -14,6 +14,7 @@ function Home() {
     const [proyectos, setProyectos] = useState([]);
     //const [proyectosFavoritos, setProyectosFavoritos] = useState([]);
     const { listFavs, setListFavs } = useContext(FavoritosContext);
+    const [fav, setFav] = useState('☆')
     const navigate = useNavigate();
     useEffect(() => {
         fetchProyectos();
@@ -25,9 +26,11 @@ function Home() {
 
     useEffect(() => {
         listFavs.forEach(fav => {
-            if (fav.id === proyectos.id) setListFavs('★')
+            if (fav.id === proyectos.id) setListFavs()
         });
     }, [])
+
+
 
     function guardarFavsLocalStorage(favoritos) {
         localStorage.setItem('favoritos', JSON.stringify(favoritos));
@@ -38,7 +41,7 @@ function Home() {
         axios.get('Proyectos.json')
             .then(response => {
                 const proyectosResponse = response.data.Proyectos;
-                const first6Proyectos = proyectosResponse.slice(0, 6).map(proyecto => ({ ...proyecto, fav: '☆' }));
+                const first6Proyectos = proyectosResponse.slice(0, 6).map(proyecto => ({ ...proyecto }));
                 console.log("proyectos:", proyectosResponse);
                 setProyectos([...first6Proyectos]);
             })
@@ -50,21 +53,18 @@ function Home() {
     if (proyectos.length === 0) return (<></>);
 
     const cambiarFav = (proyecto) => {
-        const proyectosActualizados = proyectos.map((p) => {
-            if (p.Id === proyecto.Id) {
-                const updatedProject = { ...p, listFavs: p.listFavs === '☆' ? '★' : '☆', favorito: !p.favorito };
-                setListFavs([...listFavs, updatedProject]);
-                return updatedProject;
-            }
-            return p;
-        });
-
-        setProyectos([...proyectosActualizados]);
-    };
+        if (fav === '☆') {
+            setFav('★')
+            setListFavs([...listFavs, proyecto]);
+        } else {
+            setFav('☆')
+            setListFavs(listFavs.filter(p => p !== proyecto))
+        }
+    }
 
     return (
         <>
-            <div class="container text-center" style={{ marginTop: "10%", marginBottom: "5%" }}>
+            <div class="container text-center" style={{ marginTop: "15%", marginBottom: "5%" }}>
                 <Row xs={1} md={2} className="g-4">
                     {proyectos.map((proyecto) => (
                         <Col md={3} key={proyecto.Id}>
@@ -74,7 +74,7 @@ function Home() {
                                     <Card.Title className="tituloCard">{proyecto.Titulo}</Card.Title>
                                     <Card.Text className="descCard">{proyecto.Descripcion}</Card.Text>
                                     <p onClick={() => cambiarFav(proyecto)} className="favorito">
-                                        {proyecto.fav}
+                                        {fav}
                                     </p>
                                 </Card.Body>
                             </Card>
@@ -133,7 +133,7 @@ function Home() {
                     <button type="submit" className="submit-button">Enviar</button>
                 </form>
             </div>
-            
+
         </>
     );
 
