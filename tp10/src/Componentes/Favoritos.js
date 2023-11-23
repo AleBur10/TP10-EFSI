@@ -6,6 +6,7 @@ import { useState } from "react";
 import { Row }  from "react-bootstrap";
 import  { Card }  from "react-bootstrap";
 import { Col } from "react-bootstrap";
+import Footer from "./Footer";
 
 
 function Favoritos() {
@@ -16,8 +17,8 @@ function Favoritos() {
   console.log("FavoritosEnFavoritos", context.listFavs);
 
   return (
-
-    <div className="container text-center" style={{ marginTop: "15%", marginBottom: "5%" }}>
+<>
+    <div className="container text-center" style={{ marginTop: "12%", marginBottom: "5%" }}>
       <Row xs={1} md={2} className="g-4">
         {context.listFavs.map((proyecto) => (
           <Col md={3} key={proyecto.Id}>
@@ -32,7 +33,8 @@ function Favoritos() {
         ))}
       </Row>
     </div>
-
+    <Footer className="footerFav"></Footer>
+    </>
   );
 }
 

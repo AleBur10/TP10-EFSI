@@ -1,10 +1,9 @@
-import "./NuestrasCreaciones.css";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { Card, CardGroup, Container, Modal, Button, Form } from "react-bootstrap";
 import { Row, Col } from "react-bootstrap";
-
+import Footer from "./Footer";
 
 function NuestrasCreaciones() {
 
@@ -50,7 +49,7 @@ function NuestrasCreaciones() {
 
     return (
         <>
-            <div className="container text-center" style={{ marginTop: "14%" }}>
+            <div className="container text-center" style={{ marginTop: "12%" }}>
                 <Row xs={1} md={2} className="g-4">
                     {proyectos.map((proyecto) => (
                         <Col md={3} key={proyecto.Id}>
@@ -84,7 +83,7 @@ function NuestrasCreaciones() {
                 </Modal.Body>
             </Modal>
 
-
+                        <Footer></Footer>
         </>
     )
 }

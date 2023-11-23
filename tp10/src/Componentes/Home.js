@@ -7,36 +7,19 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { useContext } from "react";
 import FavoritosContext from "../context/FavoritosContext";
+import Footer from "./Footer";
 
 
 function Home() {
 
     const [proyectos, setProyectos] = useState([]);
-    //const [proyectosFavoritos, setProyectosFavoritos] = useState([]);
     const { listFavs, setListFavs } = useContext(FavoritosContext);
-    const [fav, setFav] = useState('☆')
+    //const [fav, setFav] = useState('☆')
     const navigate = useNavigate();
     useEffect(() => {
         fetchProyectos();
     }, []);
-
-    useEffect(() => {
-        console.log(proyectos);
-    }, [proyectos]);
-
-    useEffect(() => {
-        listFavs.forEach(fav => {
-            if (fav.id === proyectos.id) setListFavs()
-        });
-    }, [])
-
-
-
-    function guardarFavsLocalStorage(favoritos) {
-        localStorage.setItem('favoritos', JSON.stringify(favoritos));
-    }
-
-
+    
     const fetchProyectos = () => {
         axios.get('Proyectos.json')
             .then(response => {
@@ -53,18 +36,18 @@ function Home() {
     if (proyectos.length === 0) return (<></>);
 
     const cambiarFav = (proyecto) => {
-        if (fav === '☆') {
-            setFav('★')
+        proyecto.Favorito = !proyecto.Favorito;
+
+        if (proyecto.Favorito) {
             setListFavs([...listFavs, proyecto]);
         } else {
-            setFav('☆')
-            setListFavs(listFavs.filter(p => p !== proyecto))
+            setListFavs(listFavs.filter(f => f.Id !== proyecto.Id))
         }
     }
 
     return (
         <>
-            <div class="container text-center" style={{ marginTop: "15%", marginBottom: "5%" }}>
+            <div class="container text-center" style={{ marginTop: "12%", marginBottom: "5%" }}>
                 <Row xs={1} md={2} className="g-4">
                     {proyectos.map((proyecto) => (
                         <Col md={3} key={proyecto.Id}>
@@ -74,7 +57,7 @@ function Home() {
                                     <Card.Title className="tituloCard">{proyecto.Titulo}</Card.Title>
                                     <Card.Text className="descCard">{proyecto.Descripcion}</Card.Text>
                                     <p onClick={() => cambiarFav(proyecto)} className="favorito">
-                                        {fav}
+                                        {listFavs.some(f => f.Id === proyecto.Id) ? '★' : '☆'}
                                     </p>
                                 </Card.Body>
                             </Card>
@@ -133,7 +116,7 @@ function Home() {
                     <button type="submit" className="submit-button">Enviar</button>
                 </form>
             </div>
-
+                        <Footer></Footer>
         </>
     );
 

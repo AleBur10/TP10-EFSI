@@ -39,9 +39,6 @@ function Layout() {
                 </Container>
             </Navbar>
             <Outlet />
-            <footer className="footer">
-                <p>Derechos de autor © 2023 - Martín Perez y Alexis Bursztyn</p>
-            </footer>
         </>
     );
 }

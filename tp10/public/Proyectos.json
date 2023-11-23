@@ -5,8 +5,7 @@
             "Titulo": "TP9-EFSI",
             "Descripcion": "Página de compra de juegos",
             "Foto": ["/proyecto1.PNG"],
-            "AñoCreacion": "2022",
-            "Favorito": "false"
+            "AñoCreacion": "2022"
         },
 
         {
@@ -14,8 +13,7 @@
             "Titulo": "QQSM",
             "Descripcion": "Es el tipico juego de quien quiere ser millonario",
             "Foto": ["/vegetta.jpg"],
-            "AñoCreacion": "",
-            "Favorito": "false"
+            "AñoCreacion": ""
         },
 
         {
@@ -23,8 +21,7 @@
             "Titulo": "fddf",
             "Descripcion": "",
             "Foto": [""],
-            "AñoCreacion": "",
-            "Favorito": "false"
+            "AñoCreacion": ""
         },
 
         {
@@ -32,8 +29,7 @@
             "Titulo": "edgfd",
             "Descripcion": "",
             "Foto": [""],
-            "AñoCreacion": "",
-            "Favorito": "false"
+            "AñoCreacion": ""
         },
 
         {
@@ -41,8 +37,7 @@
             "Titulo": "efef",
             "Descripcion": "",
             "Foto": [""],
-            "AñoCreacion": "",
-            "Favorito": "false"
+            "AñoCreacion": ""
         },
 
         {
@@ -50,8 +45,7 @@
             "Titulo": "gtht",
             "Descripcion": "",
             "Foto": [""],
-            "AñoCreacion": "",
-            "Favorito": "false"
+            "AñoCreacion": ""
         },
 
        {
@@ -59,8 +53,7 @@
             "Titulo": "7",
             "Descripcion": "",
             "Foto": [""],
-            "AñoCreacion": "",
-            "Favorito": "false"
+            "AñoCreacion": ""
         },
         
         {
@@ -68,8 +61,7 @@
             "Titulo": "",
             "Descripcion": "",
             "Foto": [""],
-            "AñoCreacion": "",
-            "Favorito": "false"
+            "AñoCreacion": ""
         }
     ]
 }
