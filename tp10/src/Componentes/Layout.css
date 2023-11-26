@@ -32,7 +32,8 @@ footer {
 
 
 header h1 {
-    color: #333;
+    text-align: center;
+    color: #ffffff;
 }
 
 nav {
@@ -40,7 +41,7 @@ nav {
 }
 
 .navbar a {
-    color: #333;
+    color: #ffffff;
     font-size: 16px;
     padding: 10px 15px;
     text-decoration: none;

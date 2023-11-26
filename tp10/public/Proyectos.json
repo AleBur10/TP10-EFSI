@@ -13,39 +13,39 @@
             "Titulo": "QQSM",
             "Descripcion": "Es el tipico juego de quien quiere ser millonario",
             "Foto": ["/vegetta.jpg"],
-            "AñoCreacion": ""
+            "AñoCreacion": "2022"
         },
 
         {
             "Id": 3,
-            "Titulo": "fddf",
-            "Descripcion": "",
-            "Foto": [""],
-            "AñoCreacion": ""
+            "Titulo": "MarCo",
+            "Descripcion": "CRM para Pymes y emprendedores",
+            "Foto": ["/MarCo.jpg"],
+            "AñoCreacion": "2023"
         },
 
         {
             "Id": 4,
-            "Titulo": "edgfd",
-            "Descripcion": "",
-            "Foto": [""],
-            "AñoCreacion": ""
+            "Titulo": "LoginRN",
+            "Descripcion": "Aplicación de React Native",
+            "Foto": ["/loginRN.jpg"],
+            "AñoCreacion": "2023"
         },
 
         {
             "Id": 5,
-            "Titulo": "efef",
-            "Descripcion": "",
-            "Foto": [""],
-            "AñoCreacion": ""
+            "Titulo": "Banderas",
+            "Descripcion": "Juego de adivinar de que país es la bandera",
+            "Foto": ["/paises.jpg"],
+            "AñoCreacion": "2023"
         },
 
         {
             "Id": 6,
-            "Titulo": "gtht",
-            "Descripcion": "",
-            "Foto": [""],
-            "AñoCreacion": ""
+            "Titulo": "Productos",
+            "Descripcion": "Página para comprar productos",
+            "Foto": ["/carrito.jpg"],
+            "AñoCreacion": "2023"
         },
 
        {
