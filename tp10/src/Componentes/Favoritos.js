@@ -33,7 +33,9 @@ function Favoritos() {
         ))}
       </Row>
     </div>
-    <Footer className="footerFav"></Footer>
+    <footer className="footerFav">
+      <p className="p">Derechos de autor © 2023 - Martín Perez y Alexis Bursztyn</p>
+    </footer>
     </>
   );
 }

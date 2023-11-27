@@ -50,18 +50,18 @@
 
        {
             "Id": 7,
-            "Titulo": "7",
-            "Descripcion": "",
-            "Foto": [""],
-            "AñoCreacion": ""
+            "Titulo": "Series",
+            "Descripcion": "Página para ver series",
+            "Foto": ["/netflix.jpg"],
+            "AñoCreacion": "2022"
         },
         
         {
             "Id": 8,
-            "Titulo": "",
-            "Descripcion": "",
-            "Foto": [""],
-            "AñoCreacion": ""
+            "Titulo": "Pizzas",
+            "Descripcion": "Página para elegir pizzas",
+            "Foto": ["/pizza.jpg"],
+            "AñoCreacion": "2023"
         }
     ]
 }
