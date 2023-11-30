@@ -85,7 +85,7 @@ nav ul li a {
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 8px;
-  background-color: #f7f7f7;
+  background-color: rgb(223, 210, 255);
 }
 
 .contact-form {
@@ -153,7 +153,7 @@ html {
 .about-section {
   padding: 30px;
   text-align: center;
-  background-color: #555;
+  background-color: rgb(128, 106, 186);
   color: white;
 }
 

@@ -19,7 +19,7 @@ function Home() {
     useEffect(() => {
         fetchProyectos();
     }, []);
-    
+
     const fetchProyectos = () => {
         axios.get('Proyectos.json')
             .then(response => {
@@ -47,6 +47,7 @@ function Home() {
 
     return (
         <>
+
             <div class="container text-center" style={{ marginTop: "12%", marginBottom: "5%" }}>
                 <Row xs={1} md={2} className="g-4">
                     {proyectos.map((proyecto) => (
@@ -79,7 +80,6 @@ function Home() {
                             <p className="title">CEO y Founder de MarCo</p>
                             <p>La clave del éxito es la constancia.</p>
                             <p>martinp10105@gmail.com</p>
-                            <p><button className="button">Contact</button></p>
                         </div>
                     </div>
                 </div>
@@ -92,10 +92,13 @@ function Home() {
                             <p className="title">Founder de DePhished</p>
                             <p>Nada llega por sí solo.</p>
                             <p>alexis.bursztyn@gmail.com</p>
-                            <p><button className="button">Contact</button></p>
                         </div>
                     </div>
                 </div>
+            </div>
+
+            <div className="about-section">
+                <h1>¡Contáctanos!</h1>
             </div>
 
             <div className="contact-form-container">
@@ -116,7 +119,7 @@ function Home() {
                     <button type="submit" className="submit-button">Enviar</button>
                 </form>
             </div>
-                        <Footer></Footer>
+            <Footer></Footer>
         </>
     );
 
